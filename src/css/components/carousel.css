@@ -66,16 +66,24 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   margin-right: -24px;
   /* Définit le type de défilement pour accrocher les éléments - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
 }
 
 .carousel__item {
-  /* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 260px - https://developer.mozilla.org/fr/docs/Web/CSS/flex */
-  flex: 1 0 260px;
-  /* Aligne l'élément au centre lors du défilement - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-align */
+  /* L'élément prend 1 part de l'espace disponible, ne rétrécit pas, et a une largeur de base de 80% de l'écran */
+  flex: 1 0 80vw;
+  /* Aligne l'élément au centre lors du défilement */
   scroll-snap-align: center;
 }
 
 .carousel__item img {
   /* Affiche l'image comme un bloc - https://developer.mozilla.org/fr/docs/Web/CSS/display */
   display: block;
+}
+
+.carousel__nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
